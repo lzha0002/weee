@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<style>
+    table#tb01 {
+        width:100%;
+    }
+    table#tb01 th{
+        background-color: rgb(224, 252, 252);
+        color: rgb(81, 81, 94);
+    }
+
+    table#tb01 tr:nth-child(even){
+        background-color: rgb(236, 241, 183);
+
+    }
+    table#tb01 tr:nth-child(odd){
+        background-color: rgb(238, 206, 238);
+    }
+
+</style>
+        <body>
+            <table id="tb01">
+                <tr>
+                    <th>Name</th>
+                    <th>Due Date</th>
+                    <th>Description</th>
+                </tr>
+                <% for(let i =0; i<mytasks.length; ++i){%>
+                    <tr>
+                        <td> <%= mytasks[i].taskname %> </td>
+                        <td> <%= mytasks[i].taskdue %> </td>
+                        <td> <%= mytasks[i].taskdesc %> </td>
+                    </tr>
+
+                <%}%>
+            </table>
+            <h1>Click <a href="/">here</a> to return home</h1>
+            <a href="/newtask">Add New Task</a></br>
+            
+            
+        </body>
+</html>
+
